@@ -1,0 +1,11 @@
+{
+  "Онколог": {
+    "Login": {
+      "xpath": "//input[@value='Log in']",
+      "xpath2": "42222222222222222224",
+      "Баннер": "//div[contains(@class,'home-banner-text')]/h1"
+    },
+    "Profile icon": "//div[contains(@class,'header-links-wrapper')]//span[contains(@class,'ico-user sprite-image')]",
+    "Log out": "//div[contains(@class,'header-links-wrapper')]//span[contains(@class,'ico-user sprite-image')]/../..//li/a[contains(@href,'logout')]"
+  }
+}
