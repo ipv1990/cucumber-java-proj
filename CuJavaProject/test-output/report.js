@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:Features/F01_LoginEmias.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:Features/F01_LoginPikabu.feature");
 formatter.feature({
-  "name": "Login into Emias",
+  "name": "Login into Pikabu",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Отладка шагов",
+  "name": "Авторизация и профиль",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -15,7 +15,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "User Launch Chrome Browser",
+  "name": "Launch the Chrome Browser",
   "keyword": "Given "
 });
 formatter.match({
@@ -25,7 +25,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User opens URL \"https://www.nopcommerce.com/en/login?returnUrl\u003d%2Fen\"",
+  "name": "User opens URL \"https://pikabu.ru/\"",
   "keyword": "When "
 });
 formatter.match({
@@ -35,7 +35,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User enters Email as \"PaveL_I\" and Password as \"Blackened_1990\"",
+  "name": "User enters Email as \"ipv1990@yandex.ru\" and Password as \"Master_1986\"",
   "keyword": "And "
 });
 formatter.match({
@@ -45,31 +45,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on element \"Онколог.Login.xpath\"",
+  "name": "Click on Login",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.click_on_element(String)"
+  "location": "Steps.click_on_Login()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Элемент \"Онколог.Login.Баннер\" будет иметь текст \"Free and open-source eCommerce platform\"",
-  "keyword": "Then "
+  "name": "I can see the element \"Страница.Текущий_уровень\" on the page",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.page_element_should_be(String,String)"
+  "location": "Steps.element_displayed(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Элемент \"Онколог.Login.Баннер\" будет содержать текст \"nd open-source eCommerce platfor\"",
+  "name": "I can see the element \"Страница.Пост_первый\" on the page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.page_element_should_be_contain(String,String)"
+  "location": "Steps.element_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I can see the element \"Страница.Рейтинг_поста\" on the page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.element_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I cannot see the element \"Параметры_профиля.Достижения_список\" on the page",
+  "keyword": "But "
+});
+formatter.match({
+  "location": "Steps.element_isnt_displayed(String)"
 });
 formatter.result({
   "status": "passed"
@@ -85,6 +105,36 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+  "name": "I can see the element \"Страница.Текущий_уровень\" on the page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.element_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Text of the element \"Страница.Текущий_уровень\" is \"начальный\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.page_element_should_be(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I can see the element \"Параметры_профиля.Достижения_список\" on the page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.element_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "User click on Log out button",
   "keyword": "When "
 });
@@ -95,7 +145,27 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "close browser",
+  "name": "Click on element \"Страница.Пдтв_выход\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.click_on_element(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I can see the element \"Кнопка_войти\" on the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Steps.element_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User closes browser",
   "keyword": "And "
 });
 formatter.match({

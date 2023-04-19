@@ -1,11 +1,13 @@
 {
-  "Онколог": {
-    "Login": {
-      "xpath": "//input[@value='Log in']",
-      "xpath2": "42222222222222222224",
-      "Баннер": "//div[contains(@class,'home-banner-text')]/h1"
-    },
-    "Profile icon": "//div[contains(@class,'header-links-wrapper')]//span[contains(@class,'ico-user sprite-image')]",
-    "Log out": "//div[contains(@class,'header-links-wrapper')]//span[contains(@class,'ico-user sprite-image')]/../..//li/a[contains(@href,'logout')]"
+  "Кнопка_войти": "//button[span/text()='Войти']",
+  "Страница": {
+    "Текущий_уровень": "//div[contains(@class,'achievements__level')]/strong",
+    "Пост_первый": "(//div[@class='story__content-wrapper'])[1]",
+    "Рейтинг_поста": "(//div[@class='story__rating-count'])[1]",
+    "Пдтв_выход": "//button[contains(@class,'danger') and text()='Выйти']"
+  },
+  "Параметры_профиля": {
+    "Ник": "//span[@itemprop='additionalName']",
+    "Достижения_список": "//div[contains(@class,'section_achievement')]//a[contains(@href,'achievements#')]"
   }
 }

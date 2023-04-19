@@ -14,29 +14,29 @@ public class LoginPage {
         driver=rdriver;
         PageFactory.initElements(rdriver,this);
     }
-    @FindBy(id="Username")
+    @FindBy(xpath="//div[contains(@class,'auth__field')]//input[@placeholder='Логин']")
     @CacheLookup
-    WebElement txtEmail;
+    WebElement txtLogin;
 
-    @FindBy(id="Password")
+    @FindBy(xpath="//div[contains(@class,'auth__field')]//input[@placeholder='Пароль']")
     @CacheLookup
     WebElement txtPassword;
 
-    @FindBy(xpath="//input[@value='Log in']")
+    @FindBy(xpath="//button[span/text()='Войти']")
     @CacheLookup
     WebElement btnLogin;
 
-    @FindBy(xpath="//div[contains(@class,'header-links-wrapper')]//span[contains(@class,'ico-user sprite-image')]")
+    @FindBy(xpath="//div[contains(@class,'right-menu')]//span[@class='avatar__default']")
     @CacheLookup
     WebElement InkProfile;
 
-    @FindBy(xpath="//div[contains(@class,'header-links-wrapper')]//span[contains(@class,'ico-user sprite-image')]/../..//li/a[contains(@href,'logout')]")
+    @FindBy(xpath="//div[@data-menu-item='signout']")
     @CacheLookup
     WebElement InkLogout;
 
     public void setUserName(String uname) {
-        txtEmail.clear();
-        txtEmail.sendKeys(uname);
+        txtLogin.clear();
+        txtLogin.sendKeys(uname);
     }
 
     public void setPassword(String pwd) {
@@ -44,9 +44,10 @@ public class LoginPage {
         txtPassword.sendKeys(pwd);
     }
 
-    public void clickOnPageElement(String path) {
+    public void clickOnPageElement(String path) throws InterruptedException {
         String buttonXpath = new ParseJsonLine().parseJson(path);
         driver.findElement(By.xpath(buttonXpath)).click();
+        Thread.sleep(1000);
     }
 
     public String getElementXpath(String path) {
